@@ -1,0 +1,7 @@
+main:
+  - title: "tutoring"
+    url: /tutoring
+  - title: "consulting"
+    url: /consulting
+  - title: "contact"
+    url: /contact
