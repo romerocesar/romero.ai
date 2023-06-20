@@ -17,13 +17,26 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://romero.ai" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: romerocesar
 github_username:  romerocesar
+# author
+author:
+  name: "cesar romero"
+  bio: "machine learning engineer with 13yrs in the software industry"
+  location: "seattle"
+  links:
+    - label: "email"
+      icon: "fas fa-fw fa-envelope-square"
+    - label: "twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/romerocesar"
+    - label: "github"
+      url: "https://github.com/romerocesar"
+
 
 # Build settings
+include: ["_pages"]
 theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: dark # dark, neon, dirt, air, contrast, default
 repository: romerocesar/romero.ai
-plugins:
-  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
