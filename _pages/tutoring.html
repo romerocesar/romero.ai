@@ -84,27 +84,13 @@ permalink: /tutoring
 
 <div id="carousel">
     <div class="slides">
+        {% for review in site.data.reviews %}
         <div class="slide">
-            <p class="title">Great tutor that helped me comprehend AI-ML one session versus 6 months of lectures</p>
-
-            <p>I hired Cesar to help me with my Ai assignment. Cesar
-                first asked me about the comfort level of the subject. We
-                then spent 10 minutes on the problem statement & came up
-                with the game plan. We executed 30% of the plan. Cesar
-                guided me step by step while I did the coding. He gave me
-                few tricks with the IDE. My understanding of the subject
-                went from 50 % to 80%. I also feel every energized now
-                after the session to do more on my own. Highly recommend
-                Cesar!!!</p>
-            <p class="author">Vasantha, 3 lessons</p>
-
+            <p class="title">{{review.title}}</p>
+            <p>{{review.text}}</p>
+            <p class="author">{{review.author}}</p>
         </div>
-        <div class="slide">
-            <p>"Very helpful and well made." - Jane Doe</p>
-        </div>
-        <div class="slide">
-            <p>"I would definitely recommend this to my friends." - Alice Smith</p>
-        </div>
+        {% endfor %}
     </div>
     <div class="control prev" onclick="changeSlide(-1)">&#10094;</div>
     <div class="control next" onclick="changeSlide(1)">&#10095;</div>
