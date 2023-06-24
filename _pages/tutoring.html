@@ -1,0 +1,125 @@
+---
+author_profile: false
+layout: single
+title: tutoring
+permalink: /tutoring
+---
+<style>
+
+ .container {
+     max-width: 960px;
+     margin: 0 auto;
+ }
+ .row {
+     display: flex;
+ }
+ .column {
+     flex: 1;
+     padding: 10px;
+ }
+
+ #carousel {
+     position: relative;
+     overflow: hidden;
+     width: 100%;
+     max-width: 600px;
+     margin: 0 auto;
+ }
+ .slides {
+     display: flex;
+     transition: transform 0.3s ease;
+ }
+ .slide {
+     min-width: 100%;
+     text-align: left;
+     padding: 20px;
+     box-sizing: border-box;
+ }
+ .control {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     background-color: transparent;
+     color: white;
+     padding: 0px;
+     cursor: pointer;
+ }
+ .control.prev { left: -1px; }
+ .control.next { right: 1px; }
+
+ .title {
+     font-weight: bold;
+ }
+ .author {
+     color: #999999;
+ }
+
+</style>
+
+<p>
+    I offer tutoring focused on many aspects of computer science and
+    software development, with a prefefrernce for python and AI in
+    particular. Many of my students are interested in learning more about
+    AI given the current landscape. I also work with some engineers
+    intereste in improving their software design skills or knowledge of
+    cloud computing, and even students who are new to programming altogether regardless of their age and
+    level of experience. <a href="https://calendly.com/c4tutor/python" style="text-decoration: none;">Schedule a session</a>
+</p>
+
+{% include video id="qPI9gQWcOio" provider="youtube" %}
+
+<div class="container">
+    <div class="row">
+        <div class="column">
+            over 250 hours
+        </div>
+        <div class="column">
+            &#9733;&#9733;&#9733;&#9733;&#9733;
+        </div>
+        <div class="column">
+            over 80 ratings
+        </div>
+    </div>
+</div>
+
+<div id="carousel">
+    <div class="slides">
+        <div class="slide">
+            <p class="title">Great tutor that helped me comprehend AI-ML one session versus 6 months of lectures</p>
+
+            <p>I hired Cesar to help me with my Ai assignment. Cesar
+                first asked me about the comfort level of the subject. We
+                then spent 10 minutes on the problem statement & came up
+                with the game plan. We executed 30% of the plan. Cesar
+                guided me step by step while I did the coding. He gave me
+                few tricks with the IDE. My understanding of the subject
+                went from 50 % to 80%. I also feel every energized now
+                after the session to do more on my own. Highly recommend
+                Cesar!!!</p>
+            <p class="author">Vasantha, 3 lessons</p>
+
+        </div>
+        <div class="slide">
+            <p>"Very helpful and well made." - Jane Doe</p>
+        </div>
+        <div class="slide">
+            <p>"I would definitely recommend this to my friends." - Alice Smith</p>
+        </div>
+    </div>
+    <div class="control prev" onclick="changeSlide(-1)">&#10094;</div>
+    <div class="control next" onclick="changeSlide(1)">&#10095;</div>
+</div>
+
+<script>
+ let currentSlide = 0;
+ const slides = document.querySelector('#carousel .slides');
+
+ function changeSlide(direction) {
+     currentSlide += direction;
+     const slideCount = slides.children.length;
+     if (currentSlide < 0) currentSlide = slideCount - 1;
+     if (currentSlide >= slideCount) currentSlide = 0;
+     const offset = -currentSlide * 100;
+     slides.style.transform = `translateX(${offset}%)`;
+ }
+</script>
